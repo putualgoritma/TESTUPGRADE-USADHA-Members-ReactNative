@@ -62,7 +62,7 @@ const Courier = ({navigation,route}) => {
         }).finally(f => setLoading(false))
         if(typeMenu =='Jaringan' ? !dataAgen.agent.city_id : !dataAgen.city_id){
             alert('Agen Belum Memiliki lokasi yang pasti mohon pilih agen lain')
-            // navigation.navigate('Dashboard')
+            navigation.goBack();
         }
         // locationApi()
     },[])
@@ -210,7 +210,7 @@ const Courier = ({navigation,route}) => {
         data.cost = parseFloat(price);
         data.courier = dataOngkir.courier != null ? dataOngkir.courier.toUpperCase() :null
         data.delivery_service = service
-        if(data.courier != null && data.destination !=null && data.origin !=null && data.weight !=null && data.cost !=0 && (data.address != null && data.address!='') && data.delivery_service !=null){
+        if(data.courier != null && data.destination && data.origin !=null && data.weight !=null && data.cost !=0 && (data.address != null && data.address!='') && data.delivery_service !=null ){
             setLoading(true)
             Axios.post(Config.API_ACTIVE, dataAgen,
                 {
@@ -335,7 +335,7 @@ const Courier = ({navigation,route}) => {
                         colorTheme={colors.default}
                         popupTitle="Select City"
                         // title={userReducer.city ?  (!toggleChangeCity? userReducer.city.title : "Select City") : "Select City"}
-                        title = {!toggleChangeCity ? userReducer.city.title : 'Select City'}
+                        title = {!toggleChangeCity ?( userReducer.city? userReducer.city.title : 'Select City' ) : 'Select City'}
                         selectButtonText='select'
                         cancelButtonText = 'cancel'
                         data={cities ? cities : [{id :null, name :null}]}
