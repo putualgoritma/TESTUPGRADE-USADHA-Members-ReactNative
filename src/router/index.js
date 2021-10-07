@@ -34,7 +34,8 @@ import {
   LogNotif,
   UpgradeType,
   Tree,
-  Courier
+  Courier,
+  Pay
 } from '../pages';
 import {ButtomNavigator, NotifAlert} from '../component';
 
@@ -212,6 +213,11 @@ const Router = () => {
       <Stack.Screen
         name="Courier"
         component={Courier}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Pay"
+        component={Pay}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
