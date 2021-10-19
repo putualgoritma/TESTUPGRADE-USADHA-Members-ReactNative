@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import WebView from 'react-native-webview';
 
 const Pay = ({navigation, route}) => {
-    let urimap = route.params.urimap 
+    let urimap = route.params.urimap    
     useEffect(() => {
        console.log(urimap);
     }, [])
@@ -14,9 +14,7 @@ const Pay = ({navigation, route}) => {
             <WebView
                 source={{
                 uri: urimap
-                }}
-                onMessage={event => event.nativeEvent.data === 'WINDOW_CLOSED' ? navigation.navigate('NotifAlert', {notif : 'Mohon Selesaikan Proses Pembayaran, Petunjuk Lebih Lanjut Bisa Lihat Email.'}) : alert(event.nativeEvent.data)}
-            />
+            }}/>
         </SafeAreaView>
     )
 }
