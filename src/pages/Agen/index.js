@@ -1,4 +1,5 @@
-import Geolocation from '@react-native-community/geolocation';
+// import Geolocation from '@react-native-community/geolocation';
+import Geolocation from 'react-native-geolocation-service';
 import { useIsFocused } from '@react-navigation/native';
 import Axios from 'axios';
 import { getDistance } from 'geolib';
