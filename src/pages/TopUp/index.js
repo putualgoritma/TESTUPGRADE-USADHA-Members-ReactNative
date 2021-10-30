@@ -139,7 +139,7 @@ const TopUp = ({navigation}) => {
   }
 
   const actionTopup = () => {
-    console.log(TOKEN)
+    console.log(formTopUp)
     if(selectType== 'otomatis'){
       if(nominal !=0){
          setIsLoading(true)
