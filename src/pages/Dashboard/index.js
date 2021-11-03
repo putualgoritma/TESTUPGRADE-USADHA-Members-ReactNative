@@ -24,6 +24,7 @@ import {
 } from '../../assets';
 import Config from "react-native-config";
 import { BackHandler } from 'react-native';
+import { Geocoding } from '..';
 const wait = (timeout) => {
   return new Promise(resolve => {
     setTimeout(resolve, timeout);
@@ -145,7 +146,8 @@ const Dashboard = ({navigation}) => {
         }
       >
         <View style={styles.contentHeader}>
-          <Text style={styles.textRp}>Saldo Poin </Text>
+          <Text onPress={()=>navigation.navigate(Geocoding)}>GEOCODING</Text>
+          <Text style={styles.textRp}>Saldo Poi</Text>
           <Text style={styles.textRp}>{Rupiah(point)}</Text>
           <View style={{position:'absolute', alignItems : 'center', justifyContent : 'center', width : '100%', marginLeft: 20}}>
             {userReducer.img == null || userReducer.img == '' ?  
