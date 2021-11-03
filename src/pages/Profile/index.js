@@ -19,7 +19,6 @@ import { ButtonCustom, HeaderComponent, Releoder } from '../../component';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 import { Rupiah } from '../../helper/Rupiah';
 import { colors } from '../../utils/colors';
-import Geolocation from '@react-native-community/geolocation';
 import { PermissionsAndroid } from 'react-native';
 import MapView, { Callout, Marker } from 'react-native-maps';
 import LocationServicesDialogBox from "react-native-android-location-services-dialog-box";

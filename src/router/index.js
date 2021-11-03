@@ -35,7 +35,8 @@ import {
   UpgradeType,
   Tree,
   Courier,
-  Pay
+  Pay,
+  Geocoding
 } from '../pages';
 import {ButtomNavigator, NotifAlert} from '../component';
 
@@ -218,6 +219,11 @@ const Router = () => {
       <Stack.Screen
         name="Pay"
         component={Pay}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="Geocoding"
+        component={Geocoding}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

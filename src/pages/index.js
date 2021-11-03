@@ -31,6 +31,7 @@ import UpgradeType from './UpgradeType';
 import Tree from './Tree'
 import Courier from './Courier'
 import Pay from './TopUp/pay';
+import Geocoding from './Geocoding';
 export {
   Product,
   Profile,
@@ -64,5 +65,6 @@ export {
   UpgradeType,
   Tree,
   Courier, 
-  Pay
+  Pay,
+  Geocoding
 };
