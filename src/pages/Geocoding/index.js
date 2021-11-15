@@ -3,7 +3,7 @@ import { Text,View,SafeAreaView,StyleSheet,Button } from 'react-native';
 import Geocoder from 'react-native-geocoding';
 
 const Geocoding=()=>{
-    Geocoder.init("AIzaSyB_nXYwbS7kPBrD0oBccTVsMk1L60elHcA");
+    Geocoder.init("AIzaSyBxJpfNfWPonmRTm-TktgyaNEVyQxpBHd0");
     useEffect(() => {
         Geocoder.from("Colosseum")
 		.then(json => {

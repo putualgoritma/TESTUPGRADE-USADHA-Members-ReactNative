@@ -146,8 +146,7 @@ const Dashboard = ({navigation}) => {
         }
       >
         <View style={styles.contentHeader}>
-          <Text onPress={()=>navigation.navigate(Geocoding)}>GEOCODING</Text>
-          <Text style={styles.textRp}>Saldo Poi</Text>
+          <Text style={styles.textRp}>Saldo Poin</Text>
           <Text style={styles.textRp}>{Rupiah(point)}</Text>
           <View style={{position:'absolute', alignItems : 'center', justifyContent : 'center', width : '100%', marginLeft: 20}}>
             {userReducer.img == null || userReducer.img == '' ?  

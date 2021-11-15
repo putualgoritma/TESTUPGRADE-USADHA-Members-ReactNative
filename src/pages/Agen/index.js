@@ -60,6 +60,7 @@ const Agen = ({navigation}) => {
                     (position) => {
                       location.latitude = position.coords.latitude;
                       location.longitude = position.coords.longitude;
+                      // alert(position.coords.latitude)
                   // setLoading(false) 
                       console.log('2');
                       let arrayAgen = [];

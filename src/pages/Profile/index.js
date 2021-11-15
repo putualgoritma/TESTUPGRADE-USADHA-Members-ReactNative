@@ -86,6 +86,7 @@ const Profile = ({navigation}) => {
   const [point, setPoint] = useState (0)
   const [pointUpgrade, setPointUpgrade] = useState (0)
   const [pointSaving, setPointSaving] = useState (0)
+  const [pointFee, setPointFee] = useState (0)
   const [selectedId, setSelectedId] = useState(null);
   const isFocused = useIsFocused();
   const [agen,setAgen] = useState()
@@ -352,6 +353,7 @@ const Profile = ({navigation}) => {
       setPoint(parseInt(result.data.data[0].balance_points))
       setPointUpgrade(parseInt(result.data.data[0].balance_upgrade_points))
       setPointSaving(parseInt(result.data.data[0].balance_saving_points))
+      setPointFee(parseInt(result.data.data[0].fee_points))
       // getAgen()
     }).catch((e) => {
       alert('koneksi error, mohon buka ulang aplikasinya')
@@ -630,6 +632,11 @@ const Profile = ({navigation}) => {
             <View style={{maxWidth : '100%', marginBottom : 20, flexDirection:'row'}}>
               <Text style={{flex:2}}>Poin Tabungan :</Text>
               <Text style={{flex:4,fontWeight : 'bold'}}>{Rupiah(pointSaving)}</Text>
+            </View>
+
+            <View style={{maxWidth : '100%', marginBottom : 20, flexDirection:'row'}}>
+              <Text style={{flex:2}}>Poin Komisi :</Text>
+              <Text style={{flex:4,fontWeight : 'bold'}}>{Rupiah(pointFee)}</Text>
             </View>
 
             <Text style={{fontSize: 18, fontWeight: 'bold'}}>Edit Profile</Text>
